@@ -9,5 +9,6 @@ ENV PORT 8090
 
 EXPOSE $PORT
 EXPOSE 6379
+EXPOSE 4243
 
 ENTRYPOINT ["java","-jar", "app.jar"]
