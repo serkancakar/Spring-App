@@ -11,7 +11,7 @@ pipeline {
         stage('Github') {
             steps {
                 git (
-                    url: 'https://github.com/serkancakar/Spring-App.git',
+                    url: 'git://github.com/serkancakar/Spring-App.git',
                     branch: 'main'
                     )
             }
