@@ -27,6 +27,7 @@ pipeline {
         stage('Docker Image to Harbor'){
           steps {
             script {
+              sh 'export DOCKER_HOST=tcp://10.10.16.3:2375'
               docker.withRegistry("$REGISTRY", "$HARBOR") {
                 def app = docker.build("harbor.datamarket.local:9443/app/spring-app:${env.BUILD_NUMBER}")
                 app.push()
