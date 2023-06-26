@@ -30,9 +30,6 @@ pipeline {
               docker.withRegistry("$REGISTRY", "$HARBOR") {
                 def app = docker.build("harbor.datamarket.local:9443/app/spring-app:${env.BUILD_NUMBER}")
                 app.push()
-                app.inside {
-                  sh 'docker image rm harbor.datamarket.local:9443/app/spring-app:${env.BUILD_NUMBER}'
-                }
              }
           }
         }
