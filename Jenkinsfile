@@ -34,7 +34,13 @@ pipeline {
           }
         }
       }
-
+        stage('Docker Image Remove') {
+            steps {
+                script {
+                    sh 'docker image rm harbor.datamarket.local:9443/app/spring-app:${env.BUILD_NUMBER}'
+                    }
+                }
+             }
 
         stage('Trigger ManifestUpdate') {
           steps {
