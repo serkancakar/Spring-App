@@ -2,14 +2,14 @@ server:
   port: 8090
 spring:
   datasource:
-    url: jdbc:postgresql://10.10.16.32:5432/dvdrental
-    username: serkan
+    url: jdbc:postgresql://10.110.142.232:5432/dvdrental
+    username: admin
     password: Pass1234!
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
   data:
     redis:
-      host: 10.10.16.33
+      host: 10.97.44.83
       port: 6379
       cache:
         type: redis
