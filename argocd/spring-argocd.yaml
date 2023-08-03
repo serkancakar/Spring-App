@@ -1,0 +1,15 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: spring-app
+spec:
+  destination:
+    server: https://kubernetes.default.svc  # Adjust if using a different Kubernetes API server
+    namespace: spring  # Replace with the target namespace
+  source:
+    repoURL: https://github.com/serkancakar/Spring-App-Deployment.git  # Replace with the URL to your Git repository
+    path: ./  # Replace with the path to the directory containing the YAML files
+    targetRevision: main
+  project: default  # Replace with the desired project name in Argo CD
+  syncPolicy:
+    automated: {}

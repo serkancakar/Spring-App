@@ -1,0 +1,14 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: create-db-job
+spec:
+  template:
+    spec:
+      containers:
+      - name: db-creator
+        image: postgres:10.1
+        command: ["psql","-h", "10.99.155.154", "-U", "admin", "-p", "5432"]
+        args: ["-c", "CREATE DATABASE messi;", "-c", "CREATE TABLE barcelona(id SERIAL PRIMARY KEY, first_name VARCHAR(255) NOT NULL, last_name VARCHAR(255) NOT NULL, email VARCHAR(255) NOT NULL);","-c", "INSERT INTO users(id,first_name,last_name,email)", "-c", "VALUES(2,'harun','oguz','hoguz@datamarket.com.tr');"]
+      restartPolicy: Never
+

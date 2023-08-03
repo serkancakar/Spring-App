@@ -1,0 +1,14 @@
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: postgres-pv  
+  labels:
+    app: postgres
+spec:
+  storageClassName: tanzusp
+  capacity:
+    storage: 5Gi 
+  accessModes:
+    - ReadWriteMany
+  hostPath:
+    path: "/mnt/data"
