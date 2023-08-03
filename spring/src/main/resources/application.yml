@@ -1,0 +1,16 @@
+server:
+  port: 8090
+spring:
+  datasource:
+    url: jdbc:postgresql://10.99.155.154:5432/dvdrental
+    username: admin
+    password: Pass1234!
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  data:
+    redis:
+      host: 10.97.44.83
+      port: 6379
+      cache:
+        type: redis
+
