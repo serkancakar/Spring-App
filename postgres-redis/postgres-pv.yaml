@@ -2,6 +2,7 @@ kind: PersistentVolume
 apiVersion: v1
 metadata:
   name: postgres-pv  
+  namespace: postgres
   labels:
     app: postgres
 spec:
