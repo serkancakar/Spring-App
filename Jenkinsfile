@@ -20,7 +20,7 @@ pipeline {
         stage('Maven Build') {
             steps {
                 script {
-                    sh './spring/mvnw clean package'
+                    sh './mvnw clean package'
                     }
                 }
              }
