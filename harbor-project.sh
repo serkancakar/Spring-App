@@ -1,7 +1,7 @@
 #!/bin/bash
 
 curl -k -i -u admin:Pass1234! 'POST' 'https://harbor.datamarket.local:9443/api/v2.0/projects' -H 'accept: application/json' -H 'X-Resource-Name-In-Location: false' -H 'Content-Type: application/json' -d '{
-  "project_name": "string",
+  "project_name": "app",
   "cve_allowlist": {
     "items": [
     ],

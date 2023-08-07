@@ -1,5 +1,5 @@
 import hudson.security.csrf.DefaultCrumbIssuer
-import jenkins.model.Jenkins
+import import hudson.model.*
 
 def instance = Jenkins.instance
 instance.setCrumbIssuer(new DefaultCrumbIssuer(true))
