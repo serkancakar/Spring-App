@@ -16,7 +16,7 @@
       <parameterDefinitions>
         <hudson.model.StringParameterDefinition>
           <name>DOCKER_HOST</name>
-          <defaultValue>tcp://10.10.16.3:2375</defaultValue>
+          <defaultValue>tcp://$DOCKER_HOST_IP:2375</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
       </parameterDefinitions>
