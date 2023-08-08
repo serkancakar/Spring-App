@@ -5,9 +5,6 @@ WORKDIR /app
 
 COPY ./target/spring-app-0.0.1-SNAPSHOT.jar app.jar
 
-EXPOSE 8090
-EXPOSE 6379
-EXPOSE 5432
-EXPOSE 2375
+EXPOSE 8090 6379 5432 2375
 
 ENTRYPOINT ["java","-jar", "app.jar"]

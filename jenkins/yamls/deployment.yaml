@@ -34,6 +34,8 @@ spec:
               containerPort: 50000
             - name: docker
               containerPort: 2375
+            - name: https
+              containerPort: 443
           livenessProbe:
             httpGet:
               path: "/login"
@@ -58,7 +60,7 @@ spec:
       volumes:
         - name: jenkins-data
           persistentVolumeClaim:
-              claimName: jenkins-pv-claim
+              claimName: jenkins-pvc-claim
         - name: dockersock
           hostPath:
             path: /var/run/docker.sock
